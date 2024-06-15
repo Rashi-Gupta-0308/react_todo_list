@@ -7,7 +7,7 @@ const Card = (props) => {
     const[done, setDone] = useState(false);
 
   return (
-    <div className={`w-full border rounded border-gray-400 flex p-2 items-center justify-between mt-2 
+    <div className={`w-[95%] border rounded border-gray-400 flex p-2 items-center justify-between mt-2
     ${done ? 'bg-gray-400' : 'bg-[#41b0d55f]'}`}>
       <div onClick={
         () => setDone(!done)} className='cursor-pointer'>
@@ -18,7 +18,7 @@ const Card = (props) => {
             ${done ? 'line-through text-gray-500' : ''}`}>
                 {props.item}
         </span>
-        <RiDeleteBin6Fill className='text-xl cursor-pointer ml-[350px]' 
+        <RiDeleteBin6Fill className='text-xl cursor-pointer ml-auto' 
         onClick={() => props.handler(props.id)}/>
       </div>
     </div>
